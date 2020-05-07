@@ -1,15 +1,24 @@
 import React from 'react';
+import Choose from './Choose';
+import Decide from './Decide';
 
-function Game(props) {
+function Game({throws, player, cpu, winner, resetGame, resetThrows, handleChoice}) {
   return (
     <div>
-      You Picked
-      The House Picked
-    
-      You Win
-      You Lose
-    
-      Play Again
+      {
+        player.choice ? 
+          <Decide 
+            player={player}
+            cpu={cpu}
+            winner={winner}
+            resetThrows={resetThrows}
+          />
+        : <Choose 
+            throws={throws}
+            handleChoice={handleChoice}
+          />
+      }
+      { winner ? <button onClick={resetGame}>Reset Game</button> : null }
     </div>
   );
 }

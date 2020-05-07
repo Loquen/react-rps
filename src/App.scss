@@ -6,8 +6,43 @@ $rock: linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
 $lizard: linear-gradient(hsl(261, 73%, 60%) to hsl(261, 72%, 63%));
 $cyan: linear-gradient(hsl(189, 59%, 53%) to hsl(189, 58%, 57%));
 
-$text-dark: hst(229, 25%, 31%);
+$text-dark: hsl(229, 25%, 31%);
 $text-score: hsl(229, 64%, 31%);
 $header: hsl(217, 16%, 45%);
 
 $radial: radial-gradient(hsl(214, 47%, 23%) to hsl(237, 49%, 15%));
+
+
+.App {
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    padding: 20px 30px;
+    border-style: none;
+    color: $text-dark;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: $text-dark;
+    color: white;
+  }
+
+  .scores {
+    display: flex;
+    font-weight: 700;
+    padding: 20px;
+
+    .player, .cpu {
+      padding: 10px;
+    }
+  }
+
+
+}

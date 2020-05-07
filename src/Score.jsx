@@ -1,9 +1,14 @@
 import React from 'react';
 
-function Score(props) {
+function Score({player, cpu}) {
   return (
-    <div>
-      Score
+    <div className='scores'>
+      <div className='player'>
+        Player: {player}
+      </div>
+      <div className='cpu'>
+        CPU: {cpu}
+      </div>
     </div>
   );
 }
